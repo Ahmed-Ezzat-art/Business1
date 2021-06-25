@@ -1,0 +1,464 @@
+:root{
+    --main-color:#d31336;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: tahoma , sans-serif;
+}
+h1,h2,h3,h4,h5{
+    text-transform: capitalize;
+}
+a:hover,
+a:focus{
+    text-decoration: none;
+    color: #fff;
+}
+.margin-top{
+    margin-top: 100px;
+}
+.section-header h2{
+    color: var(--main-color);
+}
+/*  ===================
+        Home
+=======================*/
+.home{
+    width: 100%;
+    height: 100vh;
+    background-image: -webkit-linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),url(../images/2.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+}
+nav{
+    transition: all .5s;
+}
+nav .navbar-brand{
+    color: #fff;
+    text-transform: capitalize;
+    font-size: 40px;
+    font-weight: bold;
+    padding: 0;
+}
+
+nav ul{
+    display: flex;
+    margin-bottom: 0;
+}
+nav ul li{
+    margin-right: 30px;
+}
+nav ul li a{
+    color: #fff;
+    text-transform: capitalize;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.home .home-desc{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+li{
+    list-style: none;
+}
+.home .home-desc h1{
+    color: #fff;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+.home .home-desc p{
+    color: #eee;
+    line-height: 1.7;
+    letter-spacing: 1px;
+}
+
+.home .home-desc a{
+    background: #fff;
+    color: var(--main-color);
+    padding: 8px 15px;
+    border-radius: 8px;
+    margin-top: 15px;
+    font-weight: 500;
+    text-transform: capitalize;
+    display: inline-block;
+}
+.home .animate{
+    width: 35px;
+    height: 50px;
+    border: 2px solid #fff;
+    border-radius: 15px;
+    position: absolute;
+    left: 50%;
+    bottom: 50px;
+    text-align: center;
+    cursor: pointer
+}
+.home .animate i{
+    color: #ddd;
+    font-size:14px;
+    margin-top: 1px;
+    display: block;
+    animation: animate 1s infinite;
+}
+@keyframes animate{
+    0%{
+        margin-top: 1px;
+        opacity: .3
+    }
+    100%{
+        margin-top: 8px;
+        opacity: 1;
+    }
+}
+/*  Sticky Navbar*/
+
+nav.nav-sticky{
+    background: #fff;
+    box-shadow: 0px 2px 5px rgba(0,0,0,.3);
+    padding: 5px 0;
+}
+
+nav.nav-sticky ul li a{
+    color: #333;
+}
+
+nav.nav-sticky .navbar-brand,
+nav.nav-sticky a.active-link,
+nav.nav-sticky a:hover{
+    color: var(--main-color);
+}
+
+/*================  
+        About
+==================*/
+
+.about h2{
+    color: var(--main-color);
+    font-weight: 600;
+}
+.about p{
+    line-height: 1.8;
+    margin: 15px 0;
+}
+.about li{
+    line-height: 2.2;
+}
+.about li .fa{
+    color: var(--main-color);
+    padding: 3px;
+}
+
+.about .about-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about .about-content{
+    margin-top: 100px;
+    border: 2px solid var(--main-color);
+    padding: 25px 10px;
+/*    height: 260px;*/
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.about .about-content .about-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin: auto;
+    box-shadow: 0 0 0 0 var(--main-color);
+    background-color:var(--main-color) ;
+    transition: all 1s;
+}
+.about .about-content .about-icon i{
+    color: #fff;
+    transition: all 1s;
+}
+
+.about .about-content:hover .about-icon{
+    box-shadow: 0px 0px 0px 400px var(--main-color);
+    background: #fff;
+    transition: all 1s;
+}
+.about .about-content:hover .about-icon i{
+    color: var(--main-color);
+}
+.about .about-content h4{
+    margin: 15px;
+    transition: all 1s;
+}
+.about .about-content p{
+    transition: all 1s;
+    margin-bottom: 0;
+}
+.about .about-content:hover.about-content h4 , 
+.about .about-content:hover.about-content p
+{
+    color: #fff;
+}
+
+/*==================
+        Services
+==================*/
+
+.service .service-desc{
+    text-align: center;
+    margin-top: 50px;
+    border: 2px solid var(--main-color);
+    padding: 20px 15px;
+    position: relative;
+    cursor: default;
+}
+.service .service-desc .service-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 20px 0;
+}
+.service .service-desc .service-icon::before{
+    content: "";
+    position: absolute;
+    transform: rotate(45deg);
+    width: 60px;
+    height: 60px;
+    border: 2px solid var(--main-color);
+    transition: all .5s ease-in;
+}
+.service .service-desc h4{
+    margin: 10px 0;
+    padding-top: 20px;
+    color: var(--main-color);
+}
+.service .service-desc p{
+    margin-bottom: 0;
+}
+.service .service-desc::after{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    transition: all .5s;
+    background: var(--main-color);
+    z-index: -1;
+}
+.service .service-desc:hover::after{
+    width: 100%;
+}
+.service .service-desc:hover.service-desc .service-icon::before{
+    border: 2px solid #fff;
+}
+
+.service .service-desc:hover.service-desc .service-icon i,
+.service .service-desc:hover.service-desc h4,
+.service .service-desc:hover.service-desc p{
+    color: #fff;
+}
+
+.service .service-desc .service-icon i,
+.service .service-desc h4,
+.service .service-desc p
+{
+    transition: all .5s ease-in;
+}
+
+/*====================
+        Price 
+=====================*/
+.price .price-content{
+    box-shadow: 0px 3px 6px rgba(0,0,0,.3);
+    border-radius: 15px;
+    overflow: hidden;
+    text-align: center;
+}
+.price .price-content h3{
+    background: var(--main-color);
+    color: #fff;
+    padding: 10px 0;
+}
+.price .price-content h2{
+    font-weight: bold;
+    margin: 22px 0;
+    font-size: 45px;
+}
+.price .price-content li{
+    text-align: left;
+    padding: 0 18px;
+    line-height: 2.2;
+    font-weight: 500;
+    color: #777;
+}
+.price .price-content i{
+    color: var(--main-color);
+    margin-right: 7px;
+}
+.price .price-content a{
+    background: var(--main-color);
+    color: #fff;
+    font-weight: 500;
+    border-radius: 5px;
+    padding: 6px 12px;
+    margin: 15px 0 20px;
+    display: inline-block;
+    text-transform: capitalize;
+}
+
+/*--------------------
+        Testmonial
+--------------------*/
+
+.testmonial .testmonial-content{
+    box-shadow: 0px 3px 8px rgba(0,0,0,.3);
+    text-align: center;
+}
+.testmonial .img-box2{
+    width: 90%;
+    margin: auto;
+    padding-bottom: 10px;
+    height: 230px;
+    transition: all .5s;
+    z-index: 230;
+    overflow: hidden;
+}
+
+.testmonial .img-box2 img{
+    width: 100%;
+    height: 100%;
+    z-index: 220;
+}
+.testmonial .testmonial-desc{
+    padding: 0px 10px 12px;
+    transform: translateY(-200px);
+    z-index: -1;
+    transition: all .5s;
+    display: none;
+}
+.testmonial .testmonial-desc h3{
+    color: var(--main-color);
+}
+.testmonial .testmonial-desc i{
+    color: var(--main-color);
+}
+.testmonial .testmonial-content:hover .img-box2{
+    transform: translateY(-35px);
+}
+.testmonial .testmonial-content:hover .testmonial-desc{
+    transform: translateY(0);
+    display: block;
+    transition: display 3s linear;
+}
+
+/*=======================
+        Contact 
+-=====================*/
+
+.contact form{
+    box-shadow: 0px 3px 10px  rgba(0,0,0,.3);
+    padding: 40px 25px 20px;
+    margin-bottom: 50px;
+}
+.contact-content, form{
+    margin-top: 100px;
+}
+form input[type="radio"],
+form input[type="checkbox"]
+{
+    margin-right: 7px;
+}
+
+form span{
+    margin-right: 20px;
+}
+
+.contact-content li{
+    margin-bottom: 20px;
+}
+.contact-content .contact-icon{
+    color: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-left: 30px;
+    background: var(--main-color);
+}
+.contact-content .contact-icon i{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.contact-desc{
+    margin-left: 105px;
+    position: relative;
+    top: -65px
+}
+
+/*===============================
+                Footer
+==============================*/
+
+.footer{
+    background: #f1f1f1;
+    padding: 40px 0 10px;
+}
+.footer h4{
+    color: var(--main-color);
+}
+.footer-content li{
+    text-transform: capitalize;
+    line-height: 2;
+}
+
+.footer .fa{
+    margin-right: 10px;
+    font-size: 17px;
+}
+
+/*  Up botton */
+
+.up{
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    z-index: 30;
+    cursor: pointer;
+    width: 35px;
+    height: 45px;
+    text-align: center;
+    border-radius: 10px;
+/*    display: none;*/
+    background: var(--main-color);
+}
+.up i{
+    line-height: 45px;
+    color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
